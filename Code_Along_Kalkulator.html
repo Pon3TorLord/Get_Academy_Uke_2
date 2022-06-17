@@ -18,7 +18,7 @@
         // View
         view();
         function view() {
-            let html = /*HTML*/`
+            let html = `
         <div id="resultbox" class="number resultbox" id="screen"${display}</div>
         <div class="firstInRow" onclick="addCharacter(7)">7</div>
         <div class="number" onclick="addCharacter(8)">8</div>
@@ -38,11 +38,13 @@
         <div class="firstInRow" onclick="addCharacter(0)">0</div>
         <div onclick="clearResult();">C</div>
         <div onclick="calculate()">=</div>
-        <div onclick="addCharacter('+')">+</div>
-
-        <script type="text/javascript">
-        var resultBox = document.getElementById('resultBox');`
+        <div onclick="addCharacter('+')">+</div>`
+            document.getElementById('app').innerHTML = html;
         }
+
+        // <script type="text/javascript">
+        // var resultBox = document.getElementById('resultBox');
+        // }
         // Controller
         function addCharacter(inputValue) {
             display += inputValue;
