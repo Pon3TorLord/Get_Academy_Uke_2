@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Hjelpevariabel
+        let appdiv = document.getElementById("app");
+        // Model
+        let sum = 0;
+        let count = 0;
+        let average = 0;
+        let inputValue = 0;
+        // View
+        view();
+        function view() {
+            let html = /*HTML*/`
+            <input type="number oninput="inputValue = this.value">
+            <button onclick="addNumbers()">legg til</button>
+            <p>${Sum}</p>
+            <p>${Count}</p>
+            <p>${Average}</p>
+            `;
+
+            appdiv.innerHTML = html;
+        }
+        function addNumbers() {
+            // Alert("funker")
+
+            if (inputValue <= 100) {
+                sum += parseInt(inputValue);
+                count++;
+                average = sum / count;
+            }
+            view();
+        }
+        // Controller
+    </script>
+</body>
+
+</html>

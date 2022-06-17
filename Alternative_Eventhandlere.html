@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body onload="testOnLoad()">
+    <p>Ferdighet 2a - Alternative eventhandlere: onchange osv.</p>
+    <input type="text" onchange="testOnChange()" oninput="testOnInput()" />
+    <h3 onmouseover="testOnMouseOver()" onmouseout="testOnMouseOut()">Test test test</h3>
+    <button onclick="trykk()">Trykk her</button>
+    <div oncontextmenu="contextFunc()" contextmenu="mymenu"></div>
+    <menu type="context" id="mymenu"></menu>
+    <input type="text" onkeydown="onkeyDown()">
+    <div oncontextmenu="contextFunc()" contextmenu="mymenu">
+        <p>Trykk her for å åpne opp meny vinduet</p>
+        <menu type="context" id="mymenu">
+            <menuitem label="Refresh" onclick="window.location.reload();" icon="ico_reload.png">
+        </menu>
+
+    </div>
+
+    <h2 id="info"></h2>
+
+    <a href="https://www.w3schools.com/jsref/dom_obj_event.asp">Mer informasjon her</a>
+    <script>
+        function testOnLoad() {
+            document.getElementById('info').innerHTML;
+            console.log("onload");
+        }
+
+        function testOnChange() {
+            document.getElementById('info').innerHTML;
+            console.log("onchange");
+        }
+
+        function testOnInput() {
+            document.getElementById('info').innerHTML;
+            console.log("oninput");
+        }
+
+        function testOnMouseOver() {
+            document.getElementById('info').innerHTML;
+            console.log("onmouseover");
+        }
+
+        function testOnMouseOut() {
+            document.getElementById('info').innerHTML;
+            console.log("onmouseout");
+        }
+        function onContextMenu() {
+            document.getElementById('info').innerHTML;
+            console.log("oncontext");
+        }
+        function trykk() {
+            document.getElementById('info').innerHTML;
+            console.log('trykk');
+        }
+        function onkeyDown() {
+            document.getElementById('info').innerHTML;
+            console.log('onkeydown');
+        }
+        function contextFunc() {
+            document.getElementById('info').innerHTML;
+            console.log('contextMenu');
+        }
+        function onkeyDown() {
+            document.getElementById('info').innerHTML;
+            console.log('onkeydown');
+        }
+    </script>
+</body>
+
+</html>

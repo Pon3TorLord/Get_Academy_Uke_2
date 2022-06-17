@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .farger {
+            background-color: magenta;
+            color: rgb(0, 255, 255);
+            font-size: 30px;
+        }
+
+        .farger mark {
+            background-color: rgb(0, 255, 255);
+        }
+
+        .Frame {
+            border: 5px solid black;
+        }
+
+        .round {
+            border-radius: 5px;
+        }
+
+        .text {
+            color: black;
+            font-size: 30px;
+        }
+
+        .size {
+            height: 300px;
+            width: 100px;
+        }
+
+        .selected {
+            border: 2px dotted rebeccapurple;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- LAG 2 DIVER - DET SKAL GÅ AN Å VELGE ÉN og ÉN AV DEM-->
+    <div id="rez" onclick="setSelectedDiv(this)" style="float:left">DIV 1</div>
+    <!-- <mark> Utkryssede bokser</mark> -->
+    <div id="arrowDiv" style="float:left">🡄</div>
+
+    <div onclick="setSelectedDiv(this)" style="float:left">DIV 2</div>
+
+
+    <div id="box1" style="clear:left">Farger</div>
+    <input id="farger" type="checkbox" onchange="toggleStyle(this)" />
+
+    <div id="box2">Frame</div>
+    <input id="Frame" type="checkbox" onchange="toggleStyle(this)" />
+
+    <div id="box3">Round</div>
+    <input id="round" type="checkbox" onchange="toggleStyle(this)" />
+
+    <div id="box4">Text</div>
+    <input id="text" type="checkbox" onchange="toggleStyle(this)" />
+
+    <div id="box5">Size</div>
+    <input id="size" type="checkbox" onchange="toggleStyle(this)" />
+
+    <script>
+
+        var chosenDiv = document.getElementById('rez');  //starter med en bare så ikke den klikker om vi prøver å sette en stil på en ingenting - unngå feilmelding
+        var arrowDiv = document.getElementById('arrowDiv');
+
+        //next step: kunne velge en div, og lagre i chosenDiv variablen
+        // lage en class/stil som gjør det mulig å  se hvem du har valgt
+
+        function setSelectedDiv(clickedDiv) { //this - clicked div er this
+
+            //chosendiv er som en tom skuff med merkelappen chosenDiv på -  oppi der kan vi putte hva vi vil av verdier, og kan hente ut disse igjen ved å "trekke ut skuffen" 
+            chosenDiv = clickedDiv;
+
+            // //div 1 er valgt  - bytt pil til høyre - og motsatt
+            if (chosenDiv.innerHTML == "DIV 1") {
+                arrowDiv.innerText = "🡄";
+            }
+            else if (chosenDiv.innerHTML == "DIV 2") {
+                Mammapappa123
+
+                arrowDiv.innerText = "🡆";
+            }
+            else { console.log("nothing happened"); }
+
+
+            //sjekke hva som er aktivt NÅR man trykker på en ny div
+            farger.checked = chosenDiv.classList.contains('farger');
+            Frame.checked = chosenDiv.classList.contains('Frame');
+            round.checked = chosenDiv.classList.contains('round');
+            text.checked = chosenDiv.classList.contains('text');
+            size.checked = chosenDiv.classList.contains('size');
+
+        }
+
+        //*** JOBB MED THIS & PARAMETER :) ***//
+
+
+        function toggleStyle(selectedCheckbox) {
+
+            chosenDiv.classList.toggle(selectedCheckbox.id)
+
+        }
+
+        // function toggleStyle1() {
+        //     var checkbox1 = document.getElementById('chech1').checked;
+        //     // document.getElementById('rez').classList.toggle('farger', checkbox1);
+        //     chosenDiv.classList.toggle('farger', checkbox1);
+        // }
+        // function toggleStyle2() {
+        //     var checkbox2 = document.getElementById('chech2').checked;
+        //     //document.getElementById('rez').classList.toggle('Frame', checkbox2);
+        //     chosenDiv.classList.toggle('Frame', checkbox2);
+        // }
+        // function toggleStyle3() {
+        //     var checkbox3 = document.getElementById('chech3').checked;
+        //     //document.getElementById('rez').classList.toggle('round', checkbox3);
+        //     chosenDiv.classList.toggle('round', checkbox3);
+        // }
+        // function toggleStyle4() {
+        //     var checkbox4 = document.getElementById('chech4').checked;
+        //     //document.getElementById('rez').classList.toggle('text', checkbox4);
+        //     chosenDiv.classList.toggle('text', checkbox4);
+        // }
+
+        // function toggleStyle5() {
+        //     var checkbox5 = document.getElementById('chech5').checked;
+        //     //document.getElementById('rez').classList.toggle('size', checkbox5);
+        //     chosenDiv.classList.toggle('size', checkbox5);
+        // }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <p>Ferdighet 7a - Sette variabel til tilfeldig tall</p>
+    <div id="resultat"></div>
+    <div id="resultatHTML"></div>
+    <!--
+    Last siden på nytt for nye tall.
+    Endre tallet 10 på linje 20 og 21 til noe annet. Hva blir annerledes?
+    Endre tallet 100 på linje 20 og 21 til noe annet. Hva blir annerledes?
+    Ta bort Math.floor() på linje 20 og 21. Hva blir forskjellen?
+    -->
+    <script>
+        var resultatDiv = document.getElementById('resultat');
+        var resultatHTMLDiv = document.getElementById("resultatHTML")
+        // calculate();
+
+        var heightRan = 100 + Math.floor(Math.random() * 100);
+        var widthRan = 100 + Math.floor(Math.random() * 100);
+        var borderRan = 1 + Math.floor(Math.random() * 10);
+        function calculate() {
+            var tallA = 100 + Math.floor(Math.random() * 10);
+            var tallB = 100 + Math.floor(Math.random() * 10);
+            var sum = tallA + tallB;
+            var differense = tallA - tallB;
+            var produkt = tallA * tallB;
+            var kvotient = tallA / tallB;
+            resultatDiv.innerHTML = '' +
+                tallA + '+' + tallB + '=' + sum + '<br/>' +
+                tallA + '-' + tallB + '=' + differense + '<br/>' +
+                tallA + '*' + tallB + '=' + produkt + '<br/>' +
+                tallA + '/' + tallB + '=' + kvotient;
+            heightRanDiv.innerHTML = "" +
+                "heightRan: " + heightRanDiv + "px; " + "</br>";
+            widthRanDiv.innerHTML = "" +
+                "widthRan: " + widthRanDiv + "px; " + "</br>";
+            borderRanDiv.innerHTML = "" +
+                "borderRan: " + borderRan + "px" + "solid" + "</br>";
+        }
+
+        showDiv();
+        function showDiv() {
+            resultatDiv.innerHTML = '<div style="'
+                + 'background-color: green ' + ';'
+                + 'width: ' + widthRan + 'px;'
+                + 'height: ' + heightRan + 'px;'
+                + "border: solid " + borderRan + 'px;'
+                + '">' + '</div>';
+            resultatHTMLDiv.innerText = resultatDiv.innerHTML;
+        }
+
+    </script>
+</body>
+
+</html>

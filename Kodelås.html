@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <p>Ferdighet 4 - Variabel utenfor funksjon og innenfor funksjon, samt sette sammen tekst av flere deler</p>
+    <button onclick="selectNumber(this.innerHTML)">1</button>
+    <button onclick="selectNumber(this.innerHTML)">2</button>
+    <button onclick="selectNumber(this.innerHTML)">3</button>
+
+    <button onclick="selectNumber(this.innerHTML)">4</button>
+    <button onclick="selectNumber(this.innerHTML)">5</button>
+    <button onclick="selectNumber(this.innerHTML)">6</button>
+
+    <button onclick="selectNumber(this.innerHTML)">7</button>
+    <button onclick="selectNumber(this.innerHTML)">8</button>
+    <button onclick="selectNumber(this.innerHTML)">9</button>
+    <!-- 
+    <button onclick="tell()">Tell!</button> -->
+    <!-- <div id="info">Trykk på knappen!</div> -->
+    <div id="output"></div>
+
+    <script>
+        // var tallA = 0;
+        // var tekstA = 'TekstA ';
+        // console.log(tallA, tekstA);
+        let kode = 3812;
+        let text = '';
+        function selectNumber(numberValue) {
+            text += numberValue
+            document.getElementById('output').innerHTML = text;
+            if (kode == text) {
+                document.getElementById('output').innerHTML = 'Åpnet';
+                console.log(text);
+            }
+            else if (kode != text) {
+                document.getElementById('output').innerHTML = 'Feil kode';
+                console.log(text);
+            }
+            /*
+            while (i = 0; i < 10; i++(kode == text)) {
+                document.getElementById('output').innerHTML = 'Åpnet';
+                console.log(text);
+                break;
+            }
+        */
+        }
+        // alert(numberValue)
+        // alert(text);
+        // function tell() {
+        //     var tallB = 0;
+        //     var tekstB = 'TekstB ';
+
+        //     tallA++;
+        //     tallB++;
+        //     tekstA += '*';
+        //     tekstB += '*';
+
+        //     document.getElementById('info').innerHTML =
+        //         'TallA=' + tallA +
+        //         '<br/>TallB=' + tallB +
+        //         '<br/>TekstA=' + tekstA +
+        //         '<br/>TekstB=' + tekstB;
+         //
+
+
+    </script>
+</body>
+
+</html>
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About

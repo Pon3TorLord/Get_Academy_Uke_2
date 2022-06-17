@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torgeir's QuizSite</title>
+</head>
+
+<body>
+
+    <!-- <h2>Var det det, eller det, eller det?</h2>
+        <p id="svar1" onclick="svar(this, 'feil')">Det</p>
+        <p id="svar1" onclick="svar(this, 'feil')">Det</p>
+        <p id="svar1" onclick="svar(this, 'Riktig')">Det</p> -->
+
+    <h1>Torgeirs Kule Quizsite woahoahoahoah</h1>
+    <div id="svarTekst"></div>
+
+    <h2>Er Smurfene blå?</h2>
+
+    <div onclick="sometin(this, 'riktig')">Ja</div>
+
+    <div onclick="sometin(this, 'feil')">Nei</div>
+
+
+    <h2>Hva slags hunderase er Scooby Doo?</h2>
+
+    <div onclick="sometin(this, 'riktig')">Labrador</div>
+
+    <div onclick="sometin(this, 'feil')">Schäeferhund</div>
+
+
+    <h2>Hva slags farger har Rainbow Dash?</h2>
+
+    <div onclick="sometin(this, 'feil')">Svart</div>
+
+    <div onclick="sometin(this, 'riktig')">Blå</div>
+
+    <div onclick="sometin(this, 'feil')">Brun</div>
+
+    <div onclick="sometin(this, 'riktig')">Grønn</div>
+
+    <div onclick="sometin(this, 'riktig')">Lilla</div>
+
+    <div onclick="sometin(this, 'riktig')">Gul</div>
+
+    <div onclick="sometin(this, 'feil')">Grå</div>
+
+    <div onclick="sometin(this, 'riktig')">Oransj</div>
+
+    <div onclick="sometin(this, 'riktig')">Rød</div>
+
+    <div onclick="sometin(this, 'feil')">Hvit</div>
+
+</body>
+<style>
+    #svarTekst {
+        border: 5px;
+        color: azure;
+        background-color: grey;
+        text-align: center;
+        width: 320px;
+        padding: 10px;
+
+    }
+
+    div {
+        border: 5px;
+        margin-block: 5px;
+        margin-inline: 5px;
+        background-color: blueviolet;
+        border-width: 50px;
+        padding-inline: 10px;
+        padding-block-end: 10px;
+        font-size: large;
+        text-align: center;
+        width: 320px;
+        padding: 10px;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+
+    }
+
+    h1 {
+        color: rgb(0, 199, 0);
+        background-color: yellow;
+        text-align: center;
+        width: 320px;
+        padding: 10px;
+        margin-left: 700px;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+    }
+
+    h2 {
+        border: 5px;
+        border-color: yellowgreen;
+        background-color: forestgreen;
+        text-align: center;
+        width: 320px;
+        padding: 10px;
+        margin-left: 700px;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+
+    }
+
+    body {
+        background-color: black;
+    }
+</style>
+<script>
+    //var svarT = document.getElementById("svarTekst");
+
+    //function svar(x, wrongOrCorrect) {
+    // if (svarT.innerHTML == "") {
+    //     svarT.innerHTML = `Du svarte ${x.innerHTML} det var: ;
+
+    //}
+
+    //}
+
+    const svarT = document.getElementById("svarTekst")
+
+    function sometin(x, wrongOrCorrect) {
+        blankAll()
+
+        if (svarT.innerHTML == "") {
+            svarT.innerHTML = `Du svarte ${x.innerHTML}, det var: ${wrongOrCorrect}`;
+        }
+    }
+
+    function blankAll() {
+        document.getElementById("svarTekst").innerHTML = "";
+
+    }
+
+    // function Sometintin() {
+    //     document.getElementById("MyID").innerHTML = "Hva slags hunderase er Scooby Doo?"
+
+    // }
+</script>
+
+</html>

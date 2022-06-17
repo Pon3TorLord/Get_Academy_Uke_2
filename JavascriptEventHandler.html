@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript - Eventhandlers</title>
+</head>
+
+<body onload="loading">
+    <!--
+        Onclick
+        OnmouseOver
+        OnmouseOut
+        Oninput
+        Onchange
+        Onload
+    -->
+    <button onclick="clickMe"> Klikk På Meg </button>
+    <h1 onmouseover="over()" onmouseout="out()"> Dra Musepekeren Over Her</h1>
+    <input type="text" oninput="inputText()">
+    <input type="text" oninput="changeText()">
+    <script>
+        function clickMe() {
+            console.log("Du Trykket På Knappen")
+        }
+        function over() {
+            console.log("Du Dro Musepekeren Over Teksten")
+        }
+        function out() {
+            console.log("Du Dro Vekk MusePekeren")
+        }
+        function inputText() {
+
+            console.log("Du Skriver I Boksen")
+        }
+        function changeText() {
+            console.log("Du Har Skrevet I Boksen Ferdig")
+        }
+        function loading() {
+            alert("Du Har Lastet Opp Siden")
+        }
+    </script>
+</body>
+
+</html>

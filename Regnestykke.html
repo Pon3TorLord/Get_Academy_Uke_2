@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <p>Ferdighet 7 - Sette variabel til resultat av et regnestykke. </p>
+    <input id="tallA" type="range" min="1" max="100" step="1" oninput="calculate()" value="2" />
+    <input id="tallB" type="range" min="1" max="100" step="1" oninput="calculate()" value="2" />
+    <div id="result"></div>
+    <input id="heightSlider" type="range" min="1" max="1000" step="1" oninput="areal()" value="2" />
+    <input id="widthSlider" type="range" min="1" max="1000" step="1" oninput="areal()" value="2" />
+    <div id="resultDiv"></div>
+    <!-- <select id="fargeDiv" onchange="arealDiv()">
+        <option selected value="red">Rød</option>
+        <option value="blue">Blå</option>
+        <option value="green">Grønn</option>
+    </select> -->
+    <br>
+    <div id="firkant"></div>
+    <div id="tekstDiv"></div>
+    <script>
+        var resultDiv = document.getElementById('result');
+        var tallAInput = document.getElementById('tallA');
+        var tallBInput = document.getElementById('tallB');
+
+        calculate();
+
+        function calculate() {
+            var tallA = parseInt(tallAInput.value);
+            var tallB = parseInt(tallBInput.value);
+            var sum = tallA + tallB;
+            var differense = tallA - tallB;
+            var produkt = tallA * tallB;
+            var kvotient = tallA / tallB;
+            var sliders = heightSlider + widthSlider;
+            resultDiv.innerHTML = '' +
+                tallA + '+' + tallB + '=' + sum + '<br/>' +
+                tallA + '-' + tallB + '=' + differense + '<br/>' +
+                tallA + '*' + tallB + '=' + produkt + '<br/>' +
+                tallA + '/' + tallB + '=' + kvotient;
+        }
+        var resultAreal = document.getElementById("resultDiv");
+        var arealInput1 = document.getElementById("heightSlider");
+        var arealInput2 = document.getElementById("widthSlider");
+
+        areal();
+        function areal() {
+            var heightSlider = parseInt(arealInput1.value)
+            var widthSlider = parseInt(arealInput2.value)
+            var areal = heightSlider * widthSlider;
+            var omkrets = (areal * 2) + (widthSlider * 2);
+            resultAreal.innerHTML = "" +
+                "Areal: " + heightSlider + " * " + widthSlider
+                + " = " + areal + "<br>" +
+                'Omkrets: Bredde: (' + areal + " * 2) "
+                + "+ Høyde: (" + widthSlider + " * 2)" + " = "
+                + omkrets;
+        }
+        var arealFirkant = document.getElementById("firkant");
+        arealDiv();
+        function arealDiv() {
+            var arealInput1 = document.getElementById("heightSlider");
+            var arealInput2 = document.getElementById("widthSlider");
+            var divBredde = heightSlider;
+            var divHøyde = widthSlider;
+            var textDivhtml = document.getElementById("textDiv");
+            arealFirkant.innerHTML = "<div style='"
+                + "width: " + 50 + "px;"
+                + "height: " + 50 + "px;"
+                + "'>" + "</div>";
+            // textDivhtml.innerText = firkant.innerHTML;
+        }
+        // function design(
+
+        // ) {
+        //     '<div style="'
+        //     "height: " + heightSlider.value + "px;"
+        //     "width: " + widthSlider.value + "px;"
+        //         + '">'
+        // }
+    </script>
+</body>
+
+</html>
